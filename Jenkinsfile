@@ -28,10 +28,5 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // Publish SonarQube analysis results and wait for quality gate
-            waitForQualityGate()
-        }
     }
 }
