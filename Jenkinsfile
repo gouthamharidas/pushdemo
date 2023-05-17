@@ -12,7 +12,7 @@ pipeline {
 stage('Build') {
     steps {
         // Change directory to the folder containing the solution file
-        dir('pushdemo/PushListenerForLinux') {
+        dir('/PushListenerForLinux') {
             // Execute MSBuild command to build your C#.NET project
             sh 'msbuild PushListenerForLinux.sln /p:Configuration=Release'
         }
