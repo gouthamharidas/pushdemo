@@ -14,7 +14,7 @@ stage('Build') {
         // Change directory to the folder containing the solution file
         dir('pushdemo/PushListenerForLinux') {
             // Execute MSBuild command to build your C#.NET project
-            sh 'msbuild pushdemo/PushListenerForLinux/PushListenerForLinux.sln /p:Configuration=Release'
+            sh 'msbuild PushListenerForLinux.sln /p:Configuration=Release'
         }
     }
 }
