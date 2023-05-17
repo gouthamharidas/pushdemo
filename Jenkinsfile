@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage('SonarQube Analysis') {
-    def msbuildHome = tool 'Default MSBuild'
+    def msbuildHome = tool ' sonarqube'
     def scannerHome = tool 'SonarScanner for MSBuild'
     withSonarQubeEnv() {
       bat "\"${scannerHome}\\SonarScanner.MSBuild.exe\" begin /k:\"test2\""
